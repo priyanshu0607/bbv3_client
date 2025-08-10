@@ -10,7 +10,7 @@ const SearchDropdown = ({ onSelectItem }) => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/bill/items`);
+                const response = await axios.get(`https://bbv3-server.onrender.com/api/bill/items`);
                 setItems(response.data.rows);
             } catch (error) {
                 console.error('Error fetching items:', error);
@@ -76,5 +76,6 @@ const SearchDropdown = ({ onSelectItem }) => {
         </div>
     );
 };
+
 
 export default SearchDropdown;
