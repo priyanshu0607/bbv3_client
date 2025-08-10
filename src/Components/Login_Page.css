@@ -1,80 +1,147 @@
-/* Login_Page.css */
+/* Full-page container */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height viewport */
+  background-color: #f4f4f4; /* Light grey background */
+  padding: 15px;
+}
 
-  
+/* Main login box */
+.login-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-3px);
+}
+
+.login-box h2 {
+  color: #333333;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* Input container */
+.form-group1 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group1 label {
+  margin-top: 9px;
+  display: block;
+  margin-bottom: 8px;
+  color: #666666;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-group1 input[type="text"],
+.form-group1 input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group1 input[type="text"]:focus,
+.form-group1 input[type="password"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Show password checkbox */
+.show-password {
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #666666;
+}
+
+.show-password input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* ✅ Mobile responsiveness */
+@media (max-width: 768px) {
   .login-box {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    max-width: 100%;
-    text-align: center;
+    width: 90%;
+    padding: 30px;
   }
-  
+
   .login-box h2 {
-    color: #333333;
-    margin-bottom: 20px;
+    font-size: 22px;
   }
-  
-  .form-group1 {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
+
   .form-group1 label {
-    margin-top: 9px;
-    display: block;
-    margin-bottom: 8px;
-    color: #666666;
     font-size: 14px;
-    font-weight: bold;
   }
-  
+
   .form-group1 input[type="text"],
   .form-group1 input[type="password"] {
-    width: 100%;
-    padding: 12px;
+    padding: 13px;
     font-size: 16px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
   }
-  
-  .form-group1 input[type="text"]:focus,
-  .form-group1 input[type="password"]:focus {
-    outline: none;
-    border-color: #4caf50;
-  }
-  
-  .show-password {
-    margin-top: 11px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #666666;
-  }
-  
-  .show-password input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
+
   button[type="submit"] {
-    width: 100%;
-    padding: 12px;
     font-size: 16px;
-    border: none;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 13px;
   }
-  
-  button[type="submit"]:hover {
-    background-color: #45a049;
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    width: 95%;
+    padding: 25px;
+    box-shadow: none; /* Simpler design for small devices */
   }
-  
-  
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .show-password {
+    font-size: 14px;
+  }
+}
