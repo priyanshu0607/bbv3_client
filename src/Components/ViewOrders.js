@@ -26,7 +26,7 @@ const ViewOrders = () => {
   };
   const getOrders = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/bill/displayAllBill");
+      const response = await fetch("https://bbv3-server.onrender.com/api/bill/displayAllBill");
       const jsonData = await response.json();
       const jsonData1 = jsonData.rows
       if (Array.isArray(jsonData1)) {
@@ -106,7 +106,7 @@ const ViewOrders = () => {
   const handleDelete = async (bookingId) => {
     try {
       // Make API call to delete booking with bookingId
-      const response = await fetch(`http://localhost:3000/api/bill/deleteBill/${bookingId}`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/deleteBill/${bookingId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -287,5 +287,6 @@ const ViewOrders = () => {
     </Fragment>
   );
 };
+
 
 export default ViewOrders;
