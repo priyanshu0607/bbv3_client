@@ -1,0 +1,195 @@
+/* ViewBill.css */
+
+.bill_container {
+  width: 210mm;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5mm;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.logo {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+.bill {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10mm;
+  background-color: #fff;
+  border-radius: 8px;
+  width: fit-content;
+}
+.store-name {
+  font-size: 24px;
+  font-weight: bold;
+  width:400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.store-address, .store-contact {
+  font-size: 14px;
+  margin: 0;
+}
+
+.bill-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.bill-header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.bill-details {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bill-detail-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.items-container {
+  width: 100%;
+}
+
+.items-table-container {
+  width: 100%;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.items-table th {
+  background-color: #f2f2f2;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.summary-container p {
+  margin: 0;
+}
+
+.bill-total {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border: 1px solid #00acc1;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.button-container {
+  margin-top: 20px;
+  width: 190mm;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 40px;
+}
+
+.pdf-download-button,
+.print-button,
+.back-home-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-download-button {
+  background-color: #0fa91c;
+}
+
+.print-button {
+  background-color: #007bff;
+}
+
+.back-home-button {
+  background-color: #6c757d;
+}
+
+.pdf-download-button:hover {
+  background-color: #0a7513;
+}
+
+.print-button:hover {
+  background-color: #0056b3;
+}
+
+.back-home-button:hover {
+  background-color: #5a6268;
+}
+
+/* Optional: Responsive design */
+@media (max-width: 768px) {
+  .bill-details {
+    flex-direction: column;
+  }
+
+  .items-table {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  @page {
+    size: A5;
+    margin: 0;
+  }
+
+  body {
+    background-color: white;
+    font-size: 24px; 
+  }
+
+  .bill_container {
+    background-color: white;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .bill {
+    width: 210mm; 
+    height: 210mm;
+  }
+
+  .items-table th,
+  .items-table td {
+    font-size: 24px; /* Increase font size for items in the item table */
+  }
+}
