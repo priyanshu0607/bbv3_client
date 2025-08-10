@@ -36,7 +36,7 @@ const EditBill2 = () => {
 
   const fetchBillData = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/bill/displayBill/${id}`);
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/displayBill/${id}`);
       if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
       const jsonData = await response.json();
@@ -128,7 +128,7 @@ const EditBill2 = () => {
 
   const updateInventory = async (itemDescription, quantity) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/bill/updateQuantity`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/updateQuantity`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ item_description: itemDescription, quantity: quantity })
@@ -176,7 +176,7 @@ const EditBill2 = () => {
         items_ordered: itemsStringArray
       };
 
-      const response = await fetch(`http://localhost:3000/api/bill/updateBooking/${updatedBillData.bill_id}`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/updateBooking/${updatedBillData.bill_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -417,4 +417,5 @@ const EditBill2 = () => {
 };
 
 export default EditBill2;
+
 
