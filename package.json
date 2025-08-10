@@ -22,12 +22,6 @@
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"
   },
-  "scripts": {
-    "start": "start",
-    "build": "build",
-    "test": "test",
-    "eject": "eject"
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
