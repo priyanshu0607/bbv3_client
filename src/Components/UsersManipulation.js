@@ -11,7 +11,7 @@ const UsersManipulation = () => {
   const userData = { username: name, role, password };
 
   try {
-    const response = await fetch("http://localhost:3000/api/users/AddUser", {
+    const response = await fetch("https://bbv3-server.onrender.com/api/users/AddUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -86,3 +86,4 @@ const UsersManipulation = () => {
 };
 
 export default UsersManipulation;
+
