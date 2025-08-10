@@ -16,7 +16,7 @@ const ViewBill2 = () => {
   useEffect(() => {
     const getBill = async () => {
       try {
-        const billResponse = await fetch(`http://localhost:3000/api/bill/displayBill/${id}`);
+        const billResponse = await fetch(`https://bbv3-server.onrender.com/api/bill/displayBill/${id}`);
         const jsonData = await billResponse.json();
         setBill(jsonData);
         setItemsOrdered(parseItemsOrdered(jsonData.items_ordered));
@@ -149,7 +149,7 @@ const ViewBill2 = () => {
     window.open(whatsappUrl, "_blank");
 
     try {
-      const response = await fetch(`http://localhost:3000/api/bill/messageSent/${bill.bill_id}`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/messageSent/${bill.bill_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
       });
@@ -262,5 +262,6 @@ const ViewBill2 = () => {
     </Fragment>
   );
 };
+
 
 export default ViewBill2;
