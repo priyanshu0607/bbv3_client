@@ -115,7 +115,7 @@ const Bookingitems = () => {
                 items_ordered: selectedItems
             };
 
-            const response = await fetch("https://bbv3-server.onrender.com/api/bill/createBooking", {
+            const response = await fetch("http://localhost:3000/api/bill/createBooking", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -148,7 +148,7 @@ const Bookingitems = () => {
                     status: "Booked"
                 };
 
-                const itemResponse = await fetch("https://bbv3-server.onrender.com/api/items/insertItems", {
+                const itemResponse = await fetch("http://localhost:3000/api/items/insertItems", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(itemBody)
@@ -173,7 +173,7 @@ const Bookingitems = () => {
     const adjustInventoryQuantity = async (itemDescription, quantity) => {
         try {
             console.log(itemDescription,quantity)
-            const response = await fetch(`https://bbv3-server.onrender.com/api/bill/updateQuantity`, {
+            const response = await fetch(`http://localhost:3000/api/bill/updateQuantity`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ item_description: itemDescription, quantity: -quantity })
@@ -374,6 +374,5 @@ const Bookingitems = () => {
         </Fragment>
     );
 };
-
 
 export default Bookingitems;
