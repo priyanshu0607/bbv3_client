@@ -15,7 +15,7 @@ const ViewSaleBill = () => {
   useEffect(() => {
     const getBill = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/bill/displayAllSale`);
+        const response = await fetch(`https://bbv3-server.onrender.com/api/bill/displayAllSale`);
         const billList = await response.json();
 
         if (!billList || !Array.isArray(billList.rows) || billList.rows.length === 0) {
@@ -33,7 +33,7 @@ const ViewSaleBill = () => {
         const maxId = Math.max(...validIds);
         console.log("Max bill ID:", maxId);
 
-        const billResponse = await fetch(`http://localhost:3000/api/bill/displaySale/${maxId}`);
+        const billResponse = await fetch(`https://bbv3-server.onrender.com/api/bill/displaySale/${maxId}`);
         const jsonData = await billResponse.json();
 
         setBill(jsonData);
@@ -167,7 +167,7 @@ const ViewSaleBill = () => {
     window.open(whatsappUrl, '_blank');
 
     try {
-      const response = await fetch(`http://localhost:3000/api/bill/messageSent/${bill.bill_id}`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/messageSent/${bill.bill_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
       });
@@ -260,5 +260,6 @@ const ViewSaleBill = () => {
     </Fragment>
   );
 };
+
 
 export default ViewSaleBill;
