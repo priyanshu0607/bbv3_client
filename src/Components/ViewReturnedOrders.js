@@ -17,7 +17,7 @@ const ViewReturnedOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/bill/getOrdersR`);
+        const response = await fetch(`https://bbv3-server.onrender.com/api/bill/getOrdersR`);
         const jsonData = await response.json();
   
         if (Array.isArray(jsonData)) {
@@ -110,7 +110,7 @@ const ViewReturnedOrders = () => {
 
   const handleDelete = async (bookingId) => {
     try {
-      await fetch(`http://localhost:3000/api/bill/deleteBill/${bookingId}`, { method: "DELETE", headers: { "Content-Type": "application/json" } });
+      await fetch(`https://bbv3-server.onrender.com/api/bill/deleteBill/${bookingId}`, { method: "DELETE", headers: { "Content-Type": "application/json" } });
       const updatedBookings = bookings.filter((booking) => booking.bill_id !== bookingId);
       setBookings(updatedBookings);
       setFilteredOrders(updatedBookings);
@@ -204,4 +204,5 @@ const ViewReturnedOrders = () => {
 };
 
 export default ViewReturnedOrders;
+
 
