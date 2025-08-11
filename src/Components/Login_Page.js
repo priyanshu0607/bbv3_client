@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/users/login`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/users/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -84,3 +84,4 @@ const Login = () => {
 };
 
 export default Login;
+
