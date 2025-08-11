@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (username) => {
     try {
       setIsAuthenticated(true);
-      const res = await axios.post('http://localhost:3000/api/users/get-role', { username });
+      const res = await axios.post('https://bbv3-server.onrender.com/api/users/get-role', { username });
       const userRole = res.data.role;
       setRole(userRole);
     } catch (err) {
