@@ -25,7 +25,7 @@ const ViewBookings = () => {
   const getBookings = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/bill/getBookings`);
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/getBookings`);
       const jsonData = await response.json();
 
       if (Array.isArray(jsonData)) {
@@ -45,7 +45,7 @@ const ViewBookings = () => {
   const createBill = async (id) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/bill/getBookings/${id}`, {
+      const response = await fetch(`https://bbv3-server.onrender.com/api/bill/getBookings/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
       });
@@ -66,7 +66,7 @@ const ViewBookings = () => {
     }
   };
 const function1 = async(id)=>{
-  const response1 = await fetch(`http://localhost:3000/api/bill/setBookings/${id}`, {
+  const response1 = await fetch(`https://bbv3-server.onrender.com/api/bill/setBookings/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
       });
@@ -76,7 +76,7 @@ const function1 = async(id)=>{
       }
 }
 const function2= async(id)=>{
-  const response1 = await fetch(`http://localhost:3000/api/items/setItems/${id}`, {
+  const response1 = await fetch(`https://bbv3-server.onrender.com/api/items/setItems/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
   });
@@ -163,7 +163,7 @@ const combination = async (id) => {
   const handleDelete = async (bookingId) => {
     try {
       // Make API call to delete booking with bookingId
-      await fetch(`http://localhost:3000/api/bill/deleteBill/${bookingId}`, {
+      await fetch(`https://bbv3-server.onrender.com/api/bill/deleteBill/${bookingId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -331,5 +331,6 @@ const combination = async (id) => {
     </Fragment>
   );
 };
+
 
 export default ViewBookings;
