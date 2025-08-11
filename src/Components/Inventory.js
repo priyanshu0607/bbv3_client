@@ -18,7 +18,7 @@ const ItemForm = () => {
 
         if (formMode === 'bulk' && items.length > 0) {
             try {
-                const response = await fetch(`http://localhost:3000/api/items/AddInventory`, {
+                const response = await fetch(`https://bbv3-server.onrender.com/api/items/AddInventory`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ const ItemForm = () => {
             };
 
             try {
-                const response = await fetch(`http://localhost:3000/api/items/AddInventory`, {
+                const response = await fetch(`https://bbv3-server.onrender.com/api/items/AddInventory`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -221,3 +221,4 @@ const ItemForm = () => {
 };
 
 export default ItemForm;
+
