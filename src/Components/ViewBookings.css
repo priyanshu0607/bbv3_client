@@ -119,3 +119,64 @@
   gap: 10px; /* optional spacing between buttons */
   margin-top: 1rem; /* optional spacing above buttons */
 }
+
+@media (max-width: 768px) {
+  .view-bookings-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input,
+  .filter-select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .custom-date-range {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .date-input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .table {
+    font-size: 14px;
+    overflow-x: auto; /* Allow horizontal scrolling if table is too wide */
+    display: block;
+  }
+
+  .action-button-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-primary,
+  .action-button,
+  .action-button2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .table th, .table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
