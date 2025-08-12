@@ -1,36 +1,22 @@
-/* Login_Page.css - centered and responsive */
+/* Login_Page.css - responsive */
 :root {
   --card-max-width: 420px;
   --card-padding: 1.5rem;
   --brand: #4caf50;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.login-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full height viewport */
-  background-color: #f0f0f0;
-  padding: 1rem;
-}
+* { box-sizing: border-box; }
 
 .login-box {
+  margin: 6vh auto;
   background: #fff;
   padding: var(--card-padding);
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   width: clamp(320px, 90%, var(--card-max-width));
+  max-width: var(--card-max-width);
   text-align: left;
+  display: block;
 }
 
 .login-box h2 {
@@ -81,8 +67,11 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+/* center form contents on very small heights */
+@media (max-height: 500px) {
+  .login-box { margin-top: 4vh; margin-bottom: 4vh; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  button[type="submit"]:hover {
-    filter: brightness(0.95);
-  }
+  button[type="submit"]:hover { filter: brightness(0.95); }
 }
