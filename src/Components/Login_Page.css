@@ -1,93 +1,80 @@
-.login-box {
-  margin: 80px auto 0;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.login-box h2 {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.form-group1 {
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.form-group1 label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #666;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.form-group1 input[type="text"],
-.form-group1 input[type="password"] {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 0.3s ease;
-}
-
-.form-group1 input:focus {
-  outline: none;
-  border-color: #4caf50;
-}
-
-.show-password {
-  margin-top: 0.75rem;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: #666;
-}
-
-.show-password input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 16px;
-  border: none;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-@media (max-width: 480px) {
-  .login-box {
-    margin-top: 50px;
-    padding: 1.5rem;
-  }
-
-  .login-box h2 {
-    font-size: 1.5rem;
-  }
-
-  .form-group1 label,
-  .show-password {
-    font-size: 13px;
-  }
-}
+/* Login_Page.css */
 
   
-
+  .login-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .login-box h2 {
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group1 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group1 label {
+    margin-top: 9px;
+    display: block;
+    margin-bottom: 8px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .form-group1 input[type="text"],
+  .form-group1 input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group1 input[type="text"]:focus,
+  .form-group1 input[type="password"]:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  .show-password {
+    margin-top: 11px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  .show-password input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
   
